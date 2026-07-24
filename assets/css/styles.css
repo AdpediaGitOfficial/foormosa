@@ -350,7 +350,7 @@ ul { list-style: none; padding: 0; }
   .nav[data-open="true"] .nav-links { transform: translateY(0); }
   .nav-links a::after { display: none; }
   .nav-links a:not(.btn) {
-    padding: 1.15rem .25rem; font-size: 1.25rem; font-weight: 500;
+    display: block; padding: 1.15rem .25rem; font-size: 1.25rem; font-weight: 500;
     border-bottom: 1px solid var(--line);
   }
   .nav-links a:not(.btn):active { color: var(--green-600); }
