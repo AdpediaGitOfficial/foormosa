@@ -228,7 +228,7 @@ ul { list-style: none; padding: 0; }
 
 /* ---------- Accent CTA band ---------- */
 .cta-accent {
-  background: linear-gradient(120deg, #e3a840 0%, var(--accent-dk) 100%);
+  background: #ffbf47;
   color: #3a2703; border-radius: var(--radius); text-align: center;
   padding: clamp(2.4rem, 6vw, 3.6rem); box-shadow: var(--shadow-lg);
 }
