@@ -14,9 +14,9 @@ DirectoryIndex index.html
   RewriteCond %{HTTP:X-Forwarded-Proto} =http
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # non-www -> www  (comment out this block if you serve the bare domain)
-  RewriteCond %{HTTP_HOST} ^formosacochin\.com [NC]
-  RewriteRule ^ https://www.formosacochin.com%{REQUEST_URI} [L,R=301]
+  # www -> non-www  (canonical host is the bare domain; swap this block if you prefer www)
+  RewriteCond %{HTTP_HOST} ^www\.formosacochin\.com [NC]
+  RewriteRule ^ https://formosacochin.com%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # ---- Custom error page ----------------------------------------------
