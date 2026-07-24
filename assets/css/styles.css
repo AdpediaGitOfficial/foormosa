@@ -273,7 +273,8 @@ ul { list-style: none; padding: 0; }
 
 /* ---------- Product catalog ---------- */
 .catalog { display: grid; gap: 1.2rem; }
-.catalog-item { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+.catalog-item { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); scroll-margin-top: 92px; }
+.catalog-item:target { box-shadow: 0 0 0 2px var(--green-600); }
 .catalog-head { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; border-bottom: 1px solid var(--line); background: var(--paper); }
 .catalog-head img { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; flex: none; }
 .catalog-head .meta { flex: 1; }
