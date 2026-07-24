@@ -11,8 +11,11 @@
   <meta property="og:description" content="Garden-fresh spices, oils and oleoresins from the finest plantations of India. Serving buyers worldwide since 2009." />
   <meta property="og:image" content="assets/img/hero.jpg" />
   <meta name="theme-color" content="#123528" />
+  <link rel="canonical" href="https://www.formosacochin.com/" />
+  <meta property="og:url" content="https://www.formosacochin.com/" />
 
   <link rel="icon" href="assets/img/main-logo.svg" />
+  <link rel="preload" as="image" href="assets/img/hero-portrait.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap" />
@@ -66,7 +69,7 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="assets/img/hero-portrait.jpg" alt="A rich spread of fresh Indian spices" />
+          <img src="assets/img/hero-portrait.jpg" alt="A rich spread of fresh Indian spices" width="900" height="1125" fetchpriority="high" />
           <div class="chip">
             <b>15+</b><small>years of<br />export trade</small>
           </div>
@@ -300,6 +303,29 @@
       </div>
     </div>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Formosa International",
+    "url": "https://www.formosacochin.com/",
+    "logo": "https://www.formosacochin.com/assets/img/main-logo.svg",
+    "description": "Bulk exporter of premium Indian spices, essential oils, oleoresins and agro products, established 2009 in Cochin, Kerala.",
+    "foundingDate": "2009",
+    "email": "sales@formosacochin.com",
+    "telephone": "+91-75599-50501",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "51/321 (1) Panakkal, Vyloppilly Lane, Jawahar Road, Thykoodam, Vyttila",
+      "addressLocality": "Cochin",
+      "addressRegion": "Kerala",
+      "postalCode": "682019",
+      "addressCountry": "IN"
+    },
+    "sameAs": ["https://www.facebook.com/pages/Formosa-International/264374583762070"]
+  }
+  </script>
 
   <script src="assets/js/main.js" defer></script>
 </body>
