@@ -13,6 +13,7 @@
 
   /* Accent — saffron, used sparingly */
   --accent:      #cf9130;
+  --accent-dk:   #b07a1c;
   --accent-soft: rgba(207,145,48,.14);
 
   /* Chosen neutrals (slight green bias) */
@@ -224,6 +225,17 @@ ul { list-style: none; padding: 0; }
   background: rgba(47,142,108,.12); color: var(--green-900); font-weight: 500; font-size: .92rem;
 }
 .form-success.show { display: block; }
+
+/* ---------- Accent CTA band ---------- */
+.cta-accent {
+  background: linear-gradient(120deg, #e3a840 0%, var(--accent-dk) 100%);
+  color: #3a2703; border-radius: var(--radius); text-align: center;
+  padding: clamp(2.4rem, 6vw, 3.6rem); box-shadow: var(--shadow-lg);
+}
+.cta-accent h2 { font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem); color: #2e2000; }
+.cta-accent p { margin: .8rem auto 1.8rem; max-width: 42em; color: #4a3308; }
+.cta-accent .btn-dark { background: var(--green-900); color: #fff; }
+.cta-accent .btn-dark:hover { background: #0a2419; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--green-900); color: rgba(255,255,255,.72); padding-top: clamp(3rem, 6vw, 4.5rem); }
