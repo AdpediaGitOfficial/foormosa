@@ -6,17 +6,21 @@
   var nav = document.querySelector(".nav");
   var toggle = document.querySelector(".nav-toggle");
   if (nav && toggle) {
+    var setMenu = function (open) {
+      nav.setAttribute("data-open", String(open));
+      toggle.setAttribute("aria-expanded", String(open));
+      document.body.style.overflow = open ? "hidden" : "";
+    };
     toggle.addEventListener("click", function () {
-      var open = nav.getAttribute("data-open") === "true";
-      nav.setAttribute("data-open", String(!open));
-      toggle.setAttribute("aria-expanded", String(!open));
+      setMenu(nav.getAttribute("data-open") !== "true");
     });
     // close menu when a link is tapped
     nav.querySelectorAll(".nav-links a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        nav.setAttribute("data-open", "false");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+      a.addEventListener("click", function () { setMenu(false); });
+    });
+    // close on Escape
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.getAttribute("data-open") === "true") setMenu(false);
     });
   }
 
