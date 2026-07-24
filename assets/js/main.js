@@ -49,4 +49,21 @@
   // --- Footer year ---
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
+
+  // --- Enquiry form (client-side demo handling) ---
+  var form = document.getElementById("enquiry-form");
+  var success = document.getElementById("form-success");
+  if (form && success) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      // In production this posts to a mail handler or form service.
+      success.classList.add("show");
+      form.reset();
+      success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  }
 })();
