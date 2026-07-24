@@ -242,6 +242,51 @@ ul { list-style: none; padding: 0; }
 .social a { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,.08); transition: background .2s, color .2s; }
 .social a:hover { background: var(--accent); color: var(--green-900); }
 
+/* ---------- Page hero (sub-pages) ---------- */
+.page-hero { background: var(--green-900); color: #fff; padding-block: clamp(2.6rem, 6vw, 4rem); }
+.page-hero .eyebrow { color: #fff; }
+.page-hero .eyebrow::before { background: var(--accent); }
+.page-hero h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); margin-top: .8rem; }
+.page-hero p { color: rgba(255,255,255,.75); margin-top: .9rem; max-width: 46em; }
+.breadcrumb { font-size: .85rem; color: rgba(255,255,255,.6); margin-bottom: .2rem; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 .4rem; }
+
+/* ---------- Product catalog ---------- */
+.catalog { display: grid; gap: 1.2rem; }
+.catalog-item { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+.catalog-head { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; border-bottom: 1px solid var(--line); background: var(--paper); }
+.catalog-head img { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; flex: none; }
+.catalog-head .meta { flex: 1; }
+.catalog-head h3 { font-size: 1.2rem; }
+.catalog-head p { color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+.catalog-head .count { flex: none; font-size: .8rem; font-weight: 600; color: var(--green-700); background: var(--accent-soft); padding: .35rem .7rem; border-radius: 999px; white-space: nowrap; }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1.2rem 1.3rem; }
+.tag { font-size: .86rem; color: var(--ink); background: var(--paper); border: 1px solid var(--line); padding: .35rem .75rem; border-radius: 8px; }
+
+/* ---------- Quality process (a real sequence → numbered) ---------- */
+.process { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; counter-reset: step; }
+.step { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.4rem; position: relative; background: var(--white); }
+.step .n { counter-increment: step; font-weight: 700; font-size: .85rem; color: var(--green-700); background: var(--accent-soft); width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; margin-bottom: .9rem; font-variant-numeric: tabular-nums; }
+.step .n::before { content: counter(step, decimal-leading-zero); }
+.step h3 { font-size: 1.05rem; margin-bottom: .35rem; }
+.step p { color: var(--muted); font-size: .92rem; }
+
+.quote-band { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.8rem, 4vw, 2.8rem); }
+.quote-band blockquote { font-size: clamp(1.15rem, 1rem + 1vw, 1.5rem); font-weight: 500; line-height: 1.45; color: var(--ink); max-width: 40ch; }
+.quote-band .mark { color: var(--accent); font-size: 2.4rem; line-height: 0; }
+
+/* ---------- Contact branches + map ---------- */
+.branch-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.bcard { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; background: var(--white); }
+.bcard .flag { font-size: 1.4rem; }
+.bcard h3 { font-size: 1.1rem; margin: .5rem 0 .3rem; display: flex; align-items: center; gap: .5rem; }
+.bcard h3 .tag-hq { font-size: .68rem; font-weight: 700; letter-spacing: .04em; color: var(--green-700); background: var(--accent-soft); padding: .18rem .5rem; border-radius: 999px; }
+.bcard address { font-style: normal; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.bcard address a:hover { color: var(--green-700); }
+.map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); line-height: 0; }
+.map-wrap iframe { width: 100%; height: 380px; border: 0; display: block; }
+
 /* ---------- Reveal ---------- */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
